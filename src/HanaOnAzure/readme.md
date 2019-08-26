@@ -53,4 +53,15 @@ require:
 
 module-version: 0.0.1
 
+directive:
+  - where:
+      variant: ^Create$|^CreateViaIdentity$
+      verb: New
+      subject: HanaInstance
+    remove: true
+  - where:
+      variant: ^Update$|^UpdateViaIdentity$
+      verb: Update
+      subject: HanaInstance
+    remove: true
 ```
