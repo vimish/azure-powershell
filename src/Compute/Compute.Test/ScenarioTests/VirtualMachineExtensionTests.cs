@@ -156,6 +156,13 @@ namespace Microsoft.Azure.Commands.Compute.Test.ScenarioTests
             TestRunner.RunTestScript("Test-AzureDiskEncryptionLnxManagedDisk");
         }
 
+        [Fact(Skip = "New-AzUserAssignedIdentity/Get-AzUserAssignedIdentity failing in playback mode")]
+        [Trait(Category.RunType, Category.LiveOnly)]
+        public void TestAzureDiskEncryptionEncryptionIdentity()
+        {
+            TestRunner.RunTestScript("Test-AzureDiskEncryptionEncryptionIdentity");
+        }
+
         [Fact]
         [Trait(Category.AcceptanceType, Category.CheckIn)]
         public void TestVirtualMachineBginfoExtension()
